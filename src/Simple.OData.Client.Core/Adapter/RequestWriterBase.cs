@@ -87,10 +87,10 @@ public abstract class RequestWriterBase(ISession session, Lazy<IBatchWriter> def
 
 		var hasPropertiesToUpdate = entryDetails.Properties.Count > 0;
 		var usePatch = _session.Settings.PreferredUpdateMethod == ODataUpdateMethod.Patch || !hasPropertiesToUpdate;
-		if (HasUpdatedKeyProperties(collection, entryKey, entryData))
-		{
-			usePatch = false;
-		}
+		//if (HasUpdatedKeyProperties(collection, entryKey, entryData))
+		//{
+		//	usePatch = false;
+		//}
 
 		var updateMethod = usePatch ? RestVerbs.Patch : RestVerbs.Put;
 
