@@ -1,11 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	
 	<PropertyGroup>
-		<TargetFrameworks>net8.0;net7.0;netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
 		<DocumentationFile>$(DocumentationFile)\$(AssemblyName).xml</DocumentationFile>
 		<StrongNamePublicKey>$(StrongNamePublicKey)</StrongNamePublicKey>
 	</PropertyGroup>
-
+  <PropertyGroup>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
 	<PropertyGroup>
 		<PackageId>Simple.OData.V4.Client</PackageId>
 		<Summary>Simple.OData.Client helps you interact with OData APIs that comply with any version of the OData standard.</Summary>

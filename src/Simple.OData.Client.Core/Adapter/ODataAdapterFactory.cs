@@ -18,6 +18,7 @@ public class ODataAdapterFactory : IODataAdapterFactory
 	private const string ModelAdapterV4TypeName = "Simple.OData.Client.V4.Adapter.ODataModelAdapter";
 
 	/// <inheritdoc />
+	
 	public async virtual Task<IODataModelAdapter> CreateModelAdapterAsync(HttpResponseMessage response, ITypeCache typeCache)
 	{
 		var protocolVersions = (await GetSupportedProtocolVersionsAsync(response)
